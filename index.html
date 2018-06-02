@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111601420-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-111601420-1');
+    </script>
+    <title> Picem - Pitch Training </title>
+    <meta name="description" content="Picem is a simple HTML5 pitch training game, written by the SIS Coding Club">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:300,400" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/site.css">
+  </head>
+  <body>
+    <div id="navbar">
+      <a id = "navbarLeft" href="/">Picem</a> <a id = "navbarTextRight" href = '/contact'>Contact Us</a><a id = "navbarTextRight" href= "/about">About</a>
+    </div>
+    <div id="main">
+      <h1>Picem</h1> <p id="shortdesc"> a pitch training game written by the SIS coding club</p>
+      <iframe id="gameLoader" src="./game.html"> </iframe>
+      <button onClick="location.href = 'https://github.com/siscodingclub/Picem'" class="github"><img src="img/GitHub-Mark-Light-64px.png"></img><img src="img/GitHub_Logo_White.png"></img></button>
+      <p> Picem is in it's infancy, bugs are to be expected, and features are to be added. Please leave us feedback at <a href="/contact.html">Contact Us</a>.</p>
+      <h3>Why Picem?</h3>
+      <p> Picem is the Latin word for "Pitch". It sounds cool, doesn't it? </p>
+      <h3> How does it work? </h3>
+      <p> The text in the blue represents your current elo, as it increases, the difficulty should slowly increase, adding dyads, triads, sequences, and even octaves. Getting questions right will increase this elo; getting them wrong will decrease it.</p>
+      <p> You can listen and relisten a maximum of 3 times. </p>
+      <p> After submitting, the text on the right describes the answer, green describes correct, strikethrough describes extraneous notes, and red describes missing notes.
+    </div> 
+  </body>
+</html>

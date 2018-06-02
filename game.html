@@ -1,0 +1,94 @@
+<html>
+  <head
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111601420-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-111601420-1');
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/style.css"> 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <script src="js/lib/Tone.min.js"></script>
+  </head>
+  <body>
+    <div id="upper">
+      <div id="keyboard">
+        <div id="white-keys">
+          <button class="white-key" id="C2">C2</button>
+          <button class="white-key" id="D2"></button>
+          <button class="white-key" id="E2"></button>
+          <button class="white-key" id="F2"></button>
+          <button class="white-key" id="G2"></button>
+          <button class="white-key" id="A2"></button>
+          <button class="white-key" id="B2"></button>
+          <button class="white-key" id="C3">C3</button>
+          <button class="white-key" id="D3"></button>
+          <button class="white-key" id="E3"></button>
+          <button class="white-key" id="F3"></button>
+          <button class="white-key" id="G3"></button>
+          <button class="white-key" id="A3"></button>
+          <button class="white-key" id="B3"></button>
+          <button class="white-key" id="C4">C4</button>
+          <button class="white-key" id="D4"></button>
+          <button class="white-key" id="E4"></button>
+          <button class="white-key" id="F4"></button>
+          <button class="white-key" id="G4"></button>
+          <button class="white-key" id="A4"></button>
+          <button class="white-key" id="B4"></button>
+          <button class="white-key" id="C5">C5</button>
+          <button class="white-key" id="D5"></button>
+          <button class="white-key" id="E5"></button>
+          <button class="white-key" id="F5"></button>
+          <button class="white-key" id="G5"></button>
+          <button class="white-key" id="A5"></button>
+          <button class="white-key" id="B5"></button>
+        </div>
+        <div id="black-keys">
+          <button class="black-key" id="C#2"></button>
+          <button class="black-key" id="D#2"></button>
+          <span id="empty2_1" class="empty"></span>
+          <button class="black-key" id="F#2"></button>
+          <button class="black-key" id="G#2"></button>
+          <button class="black-key" id="A#2"></button>
+          <span id="empty2_2" class="empty"></span>
+          <button class="black-key" id="C#3"></button>
+          <button class="black-key" id="D#3"></button>
+          <span id="empty3_1" class="empty"></span>
+          <button class="black-key" id="F#3"></button>
+          <button class="black-key" id="G#3"></button>
+          <button class="black-key" id="A#3"></button>
+          <span id="empty3_2" class="empty"></span>
+          <button class="black-key" id="C#4"></button>
+          <button class="black-key" id="D#4"></button>
+          <span id="empty4_1" class="empty"></span>
+          <button class="black-key" id="F#4"></button>
+          <button class="black-key" id="G#4"></button>
+          <button class="black-key" id="A#4"></button>
+          <span id="empty4_2" class="empty"></span>
+          <button class="black-key" id="C#5"></button>
+          <button class="black-key" id="D#5"></button>
+          <span id="empty5_1" class="empty"></span>
+          <button class="black-key" id="F#5"></button>
+          <button class="black-key" id="G#5"></button>
+          <button class="black-key" id="A#5"></button>
+          <span id="empty5_2" class="empty"></span>
+        </div>
+        <script src="js/keyboard.js"></script>
+      </div><div id="results">
+      </div>
+    </div>
+    <div id="gamecontrols">
+      <button id="reset" onClick="resetKeyboard();">&#8634;</button>
+      <button id="relisten" onClick="relisten()">Listen</button>
+      <button id="previousNote" onClick="changeNote(-1)">&larr;</button>
+      <div id="indicateNote"><p id="currentNote"></p>  <p id="divider">/</p>  <p id="maxNote"></p></div> 
+      <button id="nextNote" onClick="changeNote(1)">&rarr;</button>
+      <button id="submit" onClick="submitAnswer()">Submit</button>
+      <div id="elo"><p id="elonum">500</p></div>
+    </div>
+    <script src="js/game.js"></script>
+    <script src="js/sounds.js"></script>
+  </body>
+</html>
