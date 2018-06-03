@@ -2,6 +2,7 @@
 var answer = [];
 var correct = [];
 var currentElo;
+var streak = 10;
 var relistenCount;
 var winMult = [0,0];
 function initGame() {
@@ -70,7 +71,7 @@ function elochange(winCalc) {
   var R2 = 10^(qElo/400);
   var E1 = R1/(R1+R2);
 
-  myElo = myElo+10*(winCalc-E1);
+  myElo = myElo+streak*(winCalc-E1);
   setElo(myElo);
 }
 function setElo(elo) {
@@ -110,7 +111,6 @@ function checkAnswers (callback) {
     var checkedAnswers = {};
     try {
       for (var j = 0; j < answer[i].length; j++) {
-        console.log('lol boi')
         if (correct[i].indexOf(answer[i][j]) == -1) {
           checkedAnswers[answer[i][j]] = "incorrect";
           winMult[1]++;
@@ -136,12 +136,13 @@ function checkAnswers (callback) {
       var displayNoteResult = document.createElement("span");
       displayNoteResult.innerText = note;
       displayNoteResult.setAttribute('class', checkedAnswers[note]);
-      console.log(displayNoteResult);
       displayResult.appendChild(displayNoteResult);
     }
     if (Math.pow(winMult[0]/winMult[1],2)>.50) {
+      streak *= 1.2;
       displayContainer.setAttribute('right', true);
     } else {
+      streak = 10;
       displayContainer.setAttribute('wrong', true);
     }
     displayContainer.appendChild(displayResult);

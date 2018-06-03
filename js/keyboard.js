@@ -27,7 +27,6 @@ for (var i = 0; i < black_keys.length; i++) {
 
 function unlockOctave (octave, hide) {
   for (var i = 0; i < white_keys.length; i++) {
-    console.log("hey");
     if (white_keys[i].id[white_keys[i].id.length-1] == octave) {
       if (hide) {
         white_keys[i].removeAttribute('show');

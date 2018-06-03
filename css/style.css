@@ -256,11 +256,9 @@ button::-moz-focus-inner {
 
 .resultContainer[wrong]{
   border: 1px solid #f44242; 
-
 }
 .resultContainer[right]{
-  border: 1px solid #4af41a; 
-
+  border: 1px solid #3ab41a; 
 }
 p {
   font-size: 14;
@@ -271,7 +269,7 @@ span {
   margin-right: 5px;
 }
 span.correct {
-  color: #4af41a;
+  color: #3ab41a;
 }
 span.wrong {
   color: #f44242;

@@ -248,8 +248,8 @@ function generateQuestion (elo, callback){
       finalmultSum = multSum;
     }
     total = baseSum*finalmultSum;
-    console.log(total + " due to " + baseSum + ", " + finalmultSum + " and length of " + musicSequence.length);
-    console.log(musicSequence);
+    //console.log(total + " due to " + baseSum + ", " + finalmultSum + " and length of " + musicSequence.length);
+    //console.log(musicSequence);
   }
   musicSequence[0][2] = total;
   threshhold = 100;
