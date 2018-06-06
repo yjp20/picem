@@ -1,0 +1,19 @@
+{
+  "name": "picem",
+  "version": "1.0.0",
+  "description": "a pitch training app made in html5",
+  "main": "router.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siscodingclub/picem.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/siscodingclub/picem/issues"
+  },
+  "homepage": "https://github.com/siscodingclub/picem#readme"
+}
