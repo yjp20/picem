@@ -1,6 +1,6 @@
-# <img src='https://github.com/siscodingclub/piano/raw/master/logo.png' height='100' width='77'>  piano 
+# <img src='https://github.com/siscodingclub/piano/raw/master/logo.png' height='100' width='77'>  picem 
 
-a html5 piano app created for the web prioritizing simplicty and ease of use
+a pitch training app made in html5
 
 - [ ] fix this README.md
 - [ ] add gui for streak (maybe)
