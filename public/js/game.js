@@ -7,14 +7,20 @@ let winMult = [0, 0];
 
 function initGame() {
   resetKeyboard();
-  if (document.cookie.elo === null) {
+  var cookieElo = getCookie("elo");
+  if (cookieElo === null) {
     setElo(500);
   } else {
-    setElo(document.cookie.elo);
+    setElo(cookieElo);
   }
   askQuestion();
 }
 
+function getCookie(key) {
+  var regexp = new RegExp("(?:^" + key + "|;\s" + key + ")=(.*?)(?:;|$)", "g")
+  var result = regexp.exec(document.cookie);
+  return result === null ? null : result[1];
+}
 function askQuestion() {
   generateQuestion(parseInt(document.getElementById('elonum').innerText, 10), (returnArray) => {
     answer = [];
@@ -43,12 +49,8 @@ function changeNote(change) {
   answer[currentNote] = saveKeyboard();
   resetKeyboard();
 
-  try {
+  if (answer[currentNote + change] !== undefined) 
     loadKeyboard(answer[currentNote + change]);
-  } catch (e) {
-    throw e;
-  }
-
 
   // disable going further than max and lower than 1
   document.getElementById('previousNote').disabled = '';
@@ -79,7 +81,7 @@ function setElo(elo) {
   if (elo <= 500) {
     elo = 500;
   }
-  document.cookie.elo = elo;
+  document.cookie = "elo=" + elo;
   document.getElementById('elonum').innerText = Math.round(elo);
   getNotesList(elo);
   if (elo >= 500) {
