@@ -14,5 +14,8 @@
   "bugs": {
     "url": "https://github.com/siscodingclub/picem/issues"
   },
-  "homepage": "https://github.com/siscodingclub/picem#readme"
+  "homepage": "https://github.com/siscodingclub/picem#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
