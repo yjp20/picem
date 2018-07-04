@@ -2,8 +2,9 @@
   "name": "picem",
   "version": "1.0.0",
   "description": "a pitch training app made in html5",
-  "main": "router.js",
+  "main": "app.js",
   "scripts": {
+    "run": "npm install && node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
