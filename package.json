@@ -4,7 +4,7 @@
   "description": "a pitch training app made in html5",
   "main": "app.js",
   "scripts": {
-    "run": "npm install && node app.js",
+    "start": "npm install && node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
