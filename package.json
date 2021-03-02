@@ -4,8 +4,7 @@
   "description": "a pitch training app made in html5",
   "main": "app.js",
   "scripts": {
-    "start": "npm install && node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx webpack"
   },
   "repository": {
     "type": "git",
@@ -17,7 +16,6 @@
   },
   "homepage": "https://github.com/siscodingclub/picem#readme",
   "dependencies": {
-    "express": "^4.16.3",
     "pug": "^2.0.3"
   }
 }
